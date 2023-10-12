@@ -14,29 +14,29 @@ $(document).ready(function() {
 		
 	var select = $( "#resource-item-1-amount-wrapper" );
 	var slider = $( "<div id='slider-resource-1'></div>" ).insertAfter( select ).slider({
-		min: 20000,
-		max: 100000,
-		value: 20000,
+		min: 200000,
+		max: 1000000,
+		value: 200000,
 		range: "min",
 		change: function(event, ui) { 
 			var sliderValue = $( "#slider-resource-1" ).slider( "option", "value" );				
 			$('#resource-1-amount').html(sliderValue);
-			if(sliderValue == '20000') {
+			if(sliderValue == '200000') {
 				progressBar(20, $('#progressBar'));
 				$('#decrease-resource-1').addClass('btn-disabled');			
 			}
-			else if (sliderValue == '40000') {
+			else if (sliderValue == '400000') {
 				progressBar(40, $('#progressBar'));
 				$('#decrease-resource-1').removeClass('btn-disabled');
 			}
-			else if (sliderValue == '60000') {
+			else if (sliderValue == '600000') {
 				progressBar(60, $('#progressBar'));
 			}
-			else if (sliderValue == '80000') {
+			else if (sliderValue == '800000') {
 				progressBar(80, $('#progressBar'));
 				$('#increase-resource-1').removeClass('btn-disabled');
 			}
-			else if (sliderValue == '100000') {
+			else if (sliderValue == '1000000') {
 				progressBar(100, $('#progressBar'));
 				$('#increase-resource-1').addClass('btn-disabled');
 			}
@@ -45,11 +45,11 @@ $(document).ready(function() {
 	
 	$('#increase-resource-1').click(function() {
 		var sliderCurrentValue = $( "#slider-resource-1" ).slider( "option", "value" );
-		slider.slider( "value", sliderCurrentValue + 20000 );		
+		slider.slider( "value", sliderCurrentValue + 200000 );		
 	});
 	$('#decrease-resource-1').click(function() {
 		var sliderCurrentValue = $( "#slider-resource-1" ).slider( "option", "value" );
-		slider.slider( "value", sliderCurrentValue - 20000 );	
+		slider.slider( "value", sliderCurrentValue - 200000 );	
 	});	
 	
 	//Resource 2 Progress Bar
